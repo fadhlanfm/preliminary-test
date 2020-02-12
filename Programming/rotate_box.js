@@ -49,7 +49,7 @@ console.log(rotate_box([2,2,1,3,1,1], 1)) // input: A = [2,2,1,3,1,1]; k = 1 -> 
 /* END PARTIAL TEST CASE */
 
 function main(){
-    console.log('Program starts. Input numbers with the format exactly written in question sheet')
+    console.log('Program starts. Input numbers exactly as the written format in question sheet')
     const readline = require('readline');
 
     const rl = readline.createInterface({
