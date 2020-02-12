@@ -1,0 +1,12 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 12 Feb 2020 pada 13.00
+-- Versi server: 10.4.8-MariaDB
+-- Versi PHP: 7.3.10
+
+insertion.sql is the original from kulina-data git without any modification
+database_design.sql is my database design solution based on ERD (empty data)
+create_db.sql is the complete solution filled with data from insertion.sql with some format editing without modifying the essence of data
