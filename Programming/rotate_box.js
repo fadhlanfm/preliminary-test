@@ -19,7 +19,7 @@ function rotate(stackOfBoxes){
             boxLeft += stackOfBoxes[i]; // count how many boxes still left
         }
         newStackOfBoxes.push(subStack); // arrange the new stack in the new container
-      }while(boxLeft>0) // do it again until there is no box left in the container
+      }while(boxLeft>0); // do it again until there is no box left in the container
     return newStackOfBoxes; // here's the rotated container
 }
 
@@ -44,5 +44,38 @@ function rotate_box(stackOfBoxes, k){
     }
 }
 
-// TEST CASE
-console.log(rotate_box([2,2,1,3,1,1], 1)) // output: [6, 3, 1]
+/* START PARTIAL TEST CASE */
+console.log(rotate_box([2,2,1,3,1,1], 1)) // input: A = [2,2,1,3,1,1]; k = 1 -> expected output: [6,3,1]
+/* END PARTIAL TEST CASE */
+
+function main(){
+    console.log('Program starts. Input numbers with the format exactly written in question sheet')
+    const readline = require('readline');
+
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    rl.question('', (input1) => {
+        rl.question('', (input2) => {
+            rl.question('', (input3) => {
+            let N = parseInt(input1)
+            let stackOfBoxes = input2.split(' ');
+            for(let i = 0; i<stackOfBoxes.length;i++){
+                stackOfBoxes[i] = parseInt(stackOfBoxes[i])
+            }
+            let k = parseInt(input3)
+            let result = rotate_box(stackOfBoxes, k);
+            let output = ''
+            for(let i = 0; i<result.length; i++){
+                output += result[i]+' '
+            }
+            console.log(output)
+            rl.close();
+            });
+        });
+    });
+}
+
+main();
